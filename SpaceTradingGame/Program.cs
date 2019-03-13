@@ -23,6 +23,7 @@ namespace SpaceTradingGame
             CharacterName = Console.ReadLine();
             Console.WriteLine("Great! Your character name is now " + CharacterName + ". Good Luck!");
             Console.ReadKey();
+            Console.WriteLine("Daniel Hineline is Awesome!");
         }
     }
 }
