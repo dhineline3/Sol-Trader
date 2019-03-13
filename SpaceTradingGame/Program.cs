@@ -6,20 +6,15 @@ using System.Threading.Tasks;
 
 namespace SpaceTradingGame
 {
-    class Game
+    public static class Game
     {
+        //character name
+        static string CharacterName = "Daniel Hineline";
 
-    }
-    class Item
-    {
-
-    }
-    class Program
-    {
-        static void Main()
+        //print out game title and overview
+        public static void StartGame()
         {
-            string CharacterName;
-
+            //the next few lines will have your own content
             Console.WriteLine("SOL TRADER");
             Console.WriteLine();
             Console.WriteLine("Welcome to Sol Trader young adventurer!");
@@ -30,11 +25,31 @@ namespace SpaceTradingGame
             Console.WriteLine();
             Console.WriteLine("Choose your path. Your journey begins now!");
             Console.WriteLine();
+            NameCharacter();
+        }
+        //ask player for a name and save it
+        static void NameCharacter()
+        {
+
             Console.Write("Please enter your character name: ");
             CharacterName = Console.ReadLine();
             Console.WriteLine();
             Console.WriteLine("Great! Your character name is now " + CharacterName + ". Good Luck!");
             Console.ReadKey();
+        }
+
+    }
+    class Item
+    {
+
+    }
+    class Program
+    {
+        static void Main()
+        {
+            Game.StartGame();
+            Console.ReadKey();
+
         }
     }
 }
