@@ -60,5 +60,6 @@ namespace SpaceTradingGame
             CharacterName = Console.ReadLine();
             Console.WriteLine($"\nGreat! Your character name is now {CharacterName}. Good Luck!");
         }
+
     }
 }

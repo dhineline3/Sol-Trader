@@ -14,16 +14,18 @@ namespace SpaceTradingGame
     {
         private static string CharacterName;
 
-        static void StandardMenu()
+        public static void StandardMenu()
         {
             string input = "";
-            Console.WriteLine(CharacterName + " ,What would you like to do?");
+            Console.WriteLine(CharacterName + "What would you like to do?");
             Console.WriteLine("A. View Inventory | B. Visit Intergalatic Market | C. Travel to a different system");
             input = Console.ReadLine();
             input = input.ToUpper();
+            Console.Clear();
             if (input == "A")
             {
                 Console.WriteLine("Here is your current Inventory");
+                ItemsList.CurrentInventory();
 
             }
             else if (input == "C")
@@ -34,15 +36,16 @@ namespace SpaceTradingGame
             else if (input == "C")
             {
                 Console.WriteLine(CharacterName + ", where would you like to travel to next?");
-                Console.WriteLine("Choose a Destination: A. Earth | B. Pandora | C. Reach | D. Proixima Centauri | E. Gliese 832 |)");
-                string destination = "";
-                destination = Console.ReadLine();
-                destination = destination.ToUpper();
+                TravelMenu.Planets();
+
             }            
         }
         static void SpacePirates()
         {
-
+            Console.WriteLine("You have been intercepted by Space Pirates! " +
+                "\nThey hail you on the communications channel ordering you to lower you shields to be boarded or you will be fired upon! \n" +
+                "What will you do? \n" +
+                "Will you A. Lower Shields | B. Attempt to negotiate | C. Attempt to flee | D. Open fire!");
         }
         static void FloatingDebris()
         {

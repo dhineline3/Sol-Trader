@@ -34,6 +34,9 @@ namespace SpaceTradingGame
             //Calls the NameCharacter method
             Game.NameCharacter();
 
+            //Regular in game menu
+            Console.Clear();
+            Events.StandardMenu();
             //End of game text method
             void EndGame()
             {
